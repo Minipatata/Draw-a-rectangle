@@ -1,0 +1,15 @@
+import pygame
+pygame.init()
+screen=pygame.display.set_mode((800,600))
+pygame.display.set_caption("Basic Python Window")
+
+running=True
+
+while running:
+  for event in pygame.event.get():
+    if event.type==pygame.QUIT:
+      running=False
+  pygame.draw.rect(screen,(0,0,255),pygame.Rect(200,250,150,80))
+  pygame.display.update()
+  
+pygame.quit()
